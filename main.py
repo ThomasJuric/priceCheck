@@ -4,6 +4,7 @@ import time
 import os
 from selenium.webdriver.common.keys import Keys
 
+#https://www.scrapehero.com/tutorial-how-to-scrape-amazon-product-details-using-python-and-selectorlib/ to scrape amazon
 # Function to search the product name given by the user on Amazon
 def for_amazon(product):
     print(product)
@@ -12,6 +13,11 @@ def for_amazon(product):
     amazon_searchBar = driver.find_element_by_xpath("//*[@id=\"twotabsearchtextbox\"]")
     amazon_searchBar.send_keys(product)
     amazon_searchBar.send_keys(Keys.RETURN)
+    time.sleep(2)
+    price = driver.find_element_by_xpath("//*[@id=\"search\"]/div[1]/div[2]/div/span[4]/div[1]/div[1]/div/span/div/div/div/div/div[2]/div[2]/div/div[2]/div[1]/div/div[1]/div/div/a/span/span[2]/span[2]")
+    price = price.text
+    print (price)
+    time.sleep(2)
 
 
 def for_ebay(product):
