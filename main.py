@@ -26,10 +26,10 @@ def for_ebay(product):
     ebay_searchBar = driver.find_element_by_xpath("//*[@id=\"gh-ac\"]")
     ebay_searchBar.send_keys(product)
     ebay_searchBar.send_keys(Keys.RETURN)
-    time.sleep(2)
-    price = driver.find_element_by_xpath("//*[@id=\"item1f058c5e11\"]/ul[1]/li[1]/span")
-    print (price)
-    print(product)
+    #time.sleep(2)
+    #price = driver.find_element_by_xpath("//*[@id=\"item1f058c5e11\"]/ul[1]/li[1]/span")
+    #print (price)
+    #print(product)
 
 
 
@@ -42,10 +42,10 @@ def for_apple(product):
     apple_searchBar.send_keys(product)
     apple_searchBar.send_keys(Keys.RETURN)
     driver.find_element_by_xpath("//*[@id=\"exploreCurated\"]/div[1]/div[2]/ul/li[2]/a").click()
-    time.sleep(5)
-    price = driver.find_element_by_xpath("//*[@id=\"model-selection\"]/bundle-selection/div[3]/div/div[2]/div/div[1]/div/bundle-selector/div[3]/div[1]/div/div[2]/span[1]/span")
-    print (price)
-    time.sleep(2)
+    #time.sleep(5)
+    #price = driver.find_element_by_xpath("//*[@id=\"model-selection\"]/bundle-selection/div[3]/div/div[2]/div/div[1]/div/bundle-selector/div[3]/div[1]/div/div[2]/span[1]/span")
+    #print (price)
+    #time.sleep(2)
 
 
 
@@ -57,10 +57,10 @@ def for_microsoft(product):
     microsoft_searchBar = driver.find_element_by_xpath("//*[@id=\"cli_shellHeaderSearchInput\"]")
     microsoft_searchBar.send_keys(product)
     microsoft_searchBar.send_keys(Keys.RETURN)
-    time.sleep(2)
-    price = driver.find_element_by_xpath("//*[@id=\"coreui-productplacement-6qfgtzo_0\"]/div[2]/div/span[3]/span[4]")
-    print (price)
-    time.sleep(2)
+    #time.sleep(2)
+    #price = driver.find_element_by_xpath("//*[@id=\"coreui-productplacement-6qfgtzo_0\"]/div[2]/div/span[3]/span[4]")
+    #print (price)
+    #time.sleep(2)
     
 
 
@@ -73,15 +73,17 @@ def for_kijiji(product):
     kijiji_searchBar = driver.find_element_by_xpath("//*[@id=\"SearchKeyword\"]")
     kijiji_searchBar.send_keys(product)
     kijiji_searchBar.send_keys(Keys.RETURN)
-    time.sleep(2)
-    price = driver.find_element_by_xpath("//*[@id=\"mainPageContent\"]/div[3]/div[3]/div[3]/div[4]/div/div[2]/div/div[1]")
-    print(price)
-    time.sleep(2)
+    #time.sleep(2)
+    #price = driver.find_element_by_xpath("//*[@id=\"mainPageContent\"]/div[3]/div[3]/div[3]/div[4]/div/div[2]/div/div[1]")
+    #print(price)
+    #time.sleep(2)
 
 
 
 
 driver = webdriver.Chrome('./chromedriver.exe')
+
+
 product = raw_input("Please enter a product you wish to search for: ")
 
 test = 1
