@@ -84,7 +84,7 @@ def for_kijiji(product):
 driver = webdriver.Chrome('./chromedriver.exe')
 
 
-product = raw_input("Please enter a product you wish to search for: ")
+product = input("Please enter a product you wish to search for: ")
 
 test = 1
 if test == 1:
